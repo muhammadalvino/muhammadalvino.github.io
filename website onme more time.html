@@ -19,7 +19,7 @@
             <li class="ctn" ><a href="#"></a>Contact</li>
           
         </ul>
-        <img src="./foto/menu-btn.png" alt="" class="menu-btn">
+        <img src="./foto/menu button.png" alt="" class="menu-btn">
     </nav>
     <header>
         <div class="header-content">
@@ -89,41 +89,6 @@
             </video>
             <img src="./foto/close.png" class="close-btn" onclick="stopvideo()">
         </div>
-    
-    
-    </section>
-   
-    <!-- ==CONTACT US== -->
-    <section>
-        <form action="">
-            <div class="title">
-              <h2>CONTACT</h2>
-            </div>
-            <div class="half">
-              <div class="item">
-                <label for="name">NAME</label>
-                <input type="text" id = "name">
-              </div>
-              <div class="item">
-                <label for="email">EMAIL</label>
-                <input type="text" id = "email">
-              </div>
-            </div>
-            <div class="full">
-              <label for="message">MESSAGE</label>
-              <textarea name="" id = "message"></textarea>
-            </div>
-            <div class="action">
-              <input type="submit" value = "SEND MESSAGE">
-              <input type="reset" value = "RESET">
-            </div>
-            <div class="icons">
-              <a href="" class = "fa fa-twitter"></a>
-              <a href="" class = "fa fa-facebook"></a>
-              <a href="" class = "fa fa-instagram"></a>
-              <a href="" class = "fa fa-github"></a>
-            </div>
-          </form>
     </section>
 
 
@@ -138,7 +103,7 @@
     }
 
     function playvideo(file){
-        myvideo.src = "./foto/"+file;
+        myvideo.src = file;
         videoplayer.style.display = "block";
 
     }
@@ -148,7 +113,30 @@
 
 
 
-    
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlink = document.querySelector('.nav-link')
+
+        menuBtn.addEventListener('click',()=>{
+            navlink.classList.toggle('mobile-menu')
+        })
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function SendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "alvino1902@gmail.com",
+    Password : "sinar168",
+    To : 'alvino1902@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "NEW CONTACT FORM ENQUIRY",
+    Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );
+        }
+    </script>
 
 </body>
 </html>
