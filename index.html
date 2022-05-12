@@ -138,7 +138,7 @@
     }
 
     function playvideo(file){
-        myvideo.src = file;
+        myvideo.src = "./foto/"+file;
         videoplayer.style.display = "block";
 
     }
@@ -148,30 +148,7 @@
 
 
 
-    <script>
-        const menuBtn = document.querySelector('.menu-btn')
-        const navlink = document.querySelector('.nav-link')
-
-        menuBtn.addEventListener('click',()=>{
-            navlink.classList.toggle('mobile-menu')
-        })
-    </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function SendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "alvino1902@gmail.com",
-    Password : "sinar168",
-    To : 'alvino1902@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "NEW CONTACT FORM ENQUIRY",
-    Body : "And this is the body"
-    }).then(
-    message => alert(message)
-    );
-        }
-    </script>
+    
 
 </body>
 </html>
