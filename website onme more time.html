@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indo Fiber</title>
+    <link rel="stylesheet" href="./style 2.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">INDOFIBER</h1>
+        <ul class="nav-link">
+            <li class="active"><a href="#"></a>Home</li>
+            <li><a href="#"></a>About </li>
+            <li><a href="#"></a>Process</li>
+            <li class="ctn" ><a href="#"></a>Contact</li>
+          
+        </ul>
+        <img src="./menu-btn.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <h2>MADE IN SUMATRA</h2>
+            <div class="line"></div>
+            <h1>THE BEST QUALITY YOU CAN GET</h1>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </header>
+
+    <!-- ==Events== -->
+    <section>
+        <div class="about">
+            <div class="inner-section">
+                <h1>About us</h1>
+                <p class="text">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,                                          
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                </p>
+                <div class="skills">
+                    <button> Contact us </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==PROCESSING== -->
+    <section>
+        <div class="container">
+            <h1>PROCESSING</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="feauter-img">
+                        <img src="foto 3.jpg" width="100%">
+                        <img src="play.png" class="play-btn" onclick="playvideo('video 4.mp4')"> 
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="foto 2.jpg">
+                            <img src="play.png" class="play-btn" onclick="playvideo('video1.mp4')">
+                        </div>
+                        <p> DRYING  </p>
+                    </div>
+                    <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="foto 4.jpeg">
+                            <img src="play.png" class="play-btn" onclick="playvideo('video2.mp4')">
+                        </div>
+                        <p> PRESSING  </p>
+                    </div>
+                      <div class="small-img-row">
+                        <div class="small-img">
+                            <img src="foto 5.jpeg">
+                            <img src="play.png" class="play-btn" onclick="playvideo('video 3.mp4')">
+                        </div>
+                        <p>PACKING</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video-player" id="videoplayer">
+            <video width="100%" controls autoplay id="myvideo">
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+            <img src="close.png" class="close-btn" onclick="stopvideo()">
+        </div>
+    
+    
+    </section>
+   
+    <!-- ==CONTACT US== -->
+    <section>
+        <form action="">
+            <div class="title">
+              <h2>CONTACT</h2>
+            </div>
+            <div class="half">
+              <div class="item">
+                <label for="name">NAME</label>
+                <input type="text" id = "name">
+              </div>
+              <div class="item">
+                <label for="email">EMAIL</label>
+                <input type="text" id = "email">
+              </div>
+            </div>
+            <div class="full">
+              <label for="message">MESSAGE</label>
+              <textarea name="" id = "message"></textarea>
+            </div>
+            <div class="action">
+              <input type="submit" value = "SEND MESSAGE">
+              <input type="reset" value = "RESET">
+            </div>
+            <div class="icons">
+              <a href="" class = "fa fa-twitter"></a>
+              <a href="" class = "fa fa-facebook"></a>
+              <a href="" class = "fa fa-instagram"></a>
+              <a href="" class = "fa fa-github"></a>
+            </div>
+          </form>
+    </section>
+
+
+
+
+<script>
+    var videoplayer = document.getElementById("videoplayer");
+    var myvideo = document.getElementById("myvideo");
+
+    function stopvideo(){
+        videoplayer.style.display = "none";
+    }
+
+    function playvideo(file){
+        myvideo.src = file;
+        videoplayer.style.display = "block";
+
+    }
+
+</script>
+      
+
+
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlink = document.querySelector('.nav-link')
+
+        menuBtn.addEventListener('click',()=>{
+            navlink.classList.toggle('mobile-menu')
+        })
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function SendEmail(){
+            Email.send({
+    Host : "smtp.gmail.com",
+    Username : "alvino1902@gmail.com",
+    Password : "sinar168",
+    To : 'alvino1902@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "NEW CONTACT FORM ENQUIRY",
+    Body : "And this is the body"
+    }).then(
+    message => alert(message)
+    );
+        }
+    </script>
+
+</body>
+</html>
