@@ -55,28 +55,28 @@
                 <div class="col">
                     <div class="feauter-img">
                         <img src="./foto/foto 3.jpg" width="100%">
-                        <img src="./foto/play.png" class="play-btn" onclick="playvideo('video 4.mp4')"> 
+                        <img src="./foto/play.png" class="play-btn" onclick="playvideo('./foto/video 4.mp4')"> 
                     </div>
                 </div>
                 <div class="col">
                     <div class="small-img-row">
                         <div class="small-img">
                             <img src="./foto/foto 2.jpg">
-                            <img src="./foto/play.png" class="play-btn" onclick="playvideo('video1.mp4')">
+                            <img src="./foto/play.png" class="play-btn" onclick="playvideo('./foto/video1.mp4')">
                         </div>
                         <p> DRYING  </p>
                     </div>
                     <div class="small-img-row">
                         <div class="small-img">
                             <img src="./foto/foto 4.jpeg">
-                            <img src="./foto/play.png" class="play-btn" onclick="playvideo('video2.mp4')">
+                            <img src="./foto/play.png" class="play-btn" onclick="playvideo('./foto/video2.mp4')">
                         </div>
                         <p> PRESSING  </p>
                     </div>
                       <div class="small-img-row">
                         <div class="small-img">
                             <img src="./foto/foto 5.jpeg">
-                            <img src="./foto/play.png" class="play-btn" onclick="playvideo('video 3.mp4')">
+                            <img src="./foto/play.png" class="play-btn" onclick="playvideo('./foto/video 3.mp4')">
                         </div>
                         <p>PACKING</p>
                     </div>
@@ -121,21 +121,7 @@
             navlink.classList.toggle('mobile-menu')
         })
     </script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function SendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "alvino1902@gmail.com",
-    Password : "sinar168",
-    To : 'alvino1902@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "NEW CONTACT FORM ENQUIRY",
-    Body : "And this is the body"
-    }).then(
-    message => alert(message)
-    );
-        }
+   
     </script>
 
 </body>
